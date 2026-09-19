@@ -1,0 +1,17 @@
+[
+  {"seq": 1, "type": "turnstile_count", "observed_at": "2026-09-19T08:00:00Z", "received_at": "2026-09-19T08:00:20Z", "element": "s_gate_t1", "in": 300, "out": 0},
+  {"seq": 2, "type": "turnstile_count", "observed_at": "2026-09-19T08:10:00Z", "received_at": "2026-09-19T08:10:15Z", "element": "s_gate_t1", "in": 260, "out": 0},
+  {"seq": 3, "type": "sensor_heartbeat", "observed_at": "2026-09-19T08:15:00Z", "received_at": "2026-09-19T08:15:05Z", "element": "s_ridge"},
+  {"seq": 4, "type": "turnstile_count", "observed_at": "2026-09-19T08:05:00Z", "received_at": "2026-09-19T08:25:00Z", "element": "s_trail_up", "in": 180, "out": 0},
+  {"seq": 5, "type": "location_segment", "observed_at": "2026-09-19T08:30:00Z", "received_at": "2026-09-19T08:30:10Z", "element": "s_ridge", "count": 96},
+  {"seq": 6, "type": "shuttle_capacity", "observed_at": "2026-09-19T08:35:00Z", "received_at": "2026-09-19T08:35:05Z", "element": "s_gate_t1", "capacity": 600},
+  {"seq": 7, "type": "sensor_status", "observed_at": "2026-09-19T08:40:00Z", "received_at": "2026-09-19T08:40:05Z", "element": "s_ridge", "online": false},
+  {"seq": 8, "type": "weather_alert", "observed_at": "2026-09-19T08:45:00Z", "received_at": "2026-09-19T08:45:05Z", "alert_id": "W-0919", "zones": ["ridge"], "severity": "red", "start": "2026-09-19T09:00:00Z", "end": "2026-09-19T11:00:00Z"},
+  {"seq": 9, "type": "facility_status", "observed_at": "2026-09-19T08:50:00Z", "received_at": "2026-09-19T08:50:05Z", "facility": "F1", "status": "down"},
+  {"seq": 10, "type": "control_impose", "observed_at": "2026-09-19T08:52:00Z", "received_at": "2026-09-19T08:52:05Z", "control_id": "C-1", "initiator": "op-zhang", "reason": "山脊暴雨，停止徒步上行", "elements": ["s_trail_up"], "expires_at": "2026-09-19T11:30:00Z"},
+  {"seq": 11, "type": "location_segment", "observed_at": "2026-09-19T08:55:00Z", "received_at": "2026-09-19T08:55:10Z", "element": "s_ridge", "count": 126},
+  {"seq": 12, "type": "facility_status", "observed_at": "2026-09-19T09:30:00Z", "received_at": "2026-09-19T09:30:05Z", "facility": "F1", "status": "up"},
+  {"seq": 13, "type": "control_release", "observed_at": "2026-09-19T09:40:00Z", "received_at": "2026-09-19T09:40:05Z", "control_id": "C-1", "operator": "op-li"},
+  {"seq": 14, "type": "control_release", "observed_at": "2026-09-19T09:42:00Z", "received_at": "2026-09-19T09:42:05Z", "control_id": "C-1", "operator": "op-wang"},
+  {"seq": 15, "type": "sensor_status", "observed_at": "2026-09-19T09:45:00Z", "received_at": "2026-09-19T09:45:05Z", "element": "s_ridge", "online": true}
+]

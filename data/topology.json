@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {"id": "gate_a", "kind": "entrance", "capacity": 2000, "name": {"zh": "入口A", "en": "Gate A"}},
+    {"id": "hub_t1", "kind": "hub", "capacity": 1500, "name": {"zh": "换乘点T1", "en": "Hub T1"}},
+    {"id": "cable_base", "kind": "station", "capacity": 600, "name": {"zh": "索道下站", "en": "Cable Base"}},
+    {"id": "cable_top", "kind": "station", "capacity": 600, "name": {"zh": "索道上站", "en": "Cable Top"}},
+    {"id": "ladder_base", "kind": "station", "capacity": 300, "name": {"zh": "天梯下站", "en": "Ladder Base"}},
+    {"id": "ladder_top", "kind": "station", "capacity": 300, "name": {"zh": "天梯上站", "en": "Ladder Top"}},
+    {"id": "trail_junction", "kind": "poi", "capacity": 400, "name": {"zh": "山道岔口", "en": "Trail Junction"}},
+    {"id": "summit", "kind": "poi", "capacity": 500, "name": {"zh": "山顶观景台", "en": "Summit"}},
+    {"id": "night_plaza", "kind": "venue", "capacity": 1200, "name": {"zh": "夜间演出广场", "en": "Night Plaza"}},
+    {"id": "extreme_base", "kind": "venue", "capacity": 200, "name": {"zh": "极限运动区", "en": "Extreme Zone"}},
+    {"id": "exit_a", "kind": "exit", "capacity": 2000, "name": {"zh": "出口A", "en": "Exit A"}}
+  ],
+  "segments": [
+    {"id": "s_gate_t1", "src": "gate_a", "dst": "hub_t1", "kind": "shuttle", "capacity": 800, "minutes": 8, "exertion": 1, "name": {"zh": "入园接驳车道", "en": "Entry shuttle road"}},
+    {"id": "s_t1_cable", "src": "hub_t1", "dst": "cable_base", "kind": "walk", "capacity": 500, "minutes": 5, "exertion": 1, "name": {"zh": "换乘步道", "en": "Hub walkway"}},
+    {"id": "s_cable_up", "src": "cable_base", "dst": "cable_top", "kind": "cable", "capacity": 400, "minutes": 12, "exertion": 1, "facility": "F1", "name": {"zh": "索道上行", "en": "Cable car up"}},
+    {"id": "s_cable_down", "src": "cable_top", "dst": "cable_base", "kind": "cable", "capacity": 400, "minutes": 12, "exertion": 1, "facility": "F1", "name": {"zh": "索道下行", "en": "Cable car down"}},
+    {"id": "s_cabletop_summit", "src": "cable_top", "dst": "summit", "kind": "walk", "capacity": 300, "minutes": 8, "exertion": 1, "name": {"zh": "索道上站步道", "en": "Summit walkway"}},
+    {"id": "s_t1_ladder", "src": "hub_t1", "dst": "ladder_base", "kind": "walk", "capacity": 300, "minutes": 6, "exertion": 1, "name": {"zh": "天梯引道", "en": "Ladder approach"}},
+    {"id": "s_ladder_up", "src": "ladder_base", "dst": "ladder_top", "kind": "ladder", "capacity": 150, "minutes": 6, "exertion": 2, "facility": "F2", "name": {"zh": "天梯", "en": "Sky ladder"}},
+    {"id": "s_ladder_summit", "src": "ladder_top", "dst": "summit", "kind": "walk", "capacity": 200, "minutes": 10, "exertion": 2, "name": {"zh": "天梯顶步道", "en": "Ladder top walkway"}},
+    {"id": "s_trail_up", "src": "hub_t1", "dst": "trail_junction", "kind": "hike", "capacity": 300, "minutes": 25, "exertion": 3, "one_way": true, "name": {"zh": "上行徒步线（单向）", "en": "Uphill trail (one-way)"}},
+    {"id": "s_ridge", "src": "trail_junction", "dst": "summit", "kind": "hike", "capacity": 120, "minutes": 30, "exertion": 4, "one_way": true, "zone": "ridge", "name": {"zh": "山脊险段（单向）", "en": "Ridge section (one-way)"}},
+    {"id": "s_summit_down", "src": "summit", "dst": "hub_t1", "kind": "hike", "capacity": 300, "minutes": 20, "exertion": 2, "one_way": true, "name": {"zh": "下行步道（单向）", "en": "Downhill walkway (one-way)"}},
+    {"id": "s_cabletop_extreme", "src": "cable_top", "dst": "extreme_base", "kind": "walk", "capacity": 150, "minutes": 7, "exertion": 2, "zone": "cliff", "name": {"zh": "极限区步道", "en": "Extreme zone walkway"}},
+    {"id": "s_t1_night", "src": "hub_t1", "dst": "night_plaza", "kind": "walk", "capacity": 900, "minutes": 6, "exertion": 1, "closure_windows": [{"daily_start": "06:00", "daily_end": "17:30"}], "name": {"zh": "夜场通道", "en": "Night plaza walkway"}},
+    {"id": "s_t1_exit", "src": "hub_t1", "dst": "exit_a", "kind": "walk", "capacity": 1000, "minutes": 5, "exertion": 1, "name": {"zh": "出园通道", "en": "Exit walkway"}}
+  ],
+  "facilities": [
+    {"id": "F1", "kind": "cable", "segments": ["s_cable_up", "s_cable_down"], "name": {"zh": "索道", "en": "Cable car"}},
+    {"id": "F2", "kind": "ladder", "segments": ["s_ladder_up"], "name": {"zh": "天梯", "en": "Sky ladder"}}
+  ]
+}
