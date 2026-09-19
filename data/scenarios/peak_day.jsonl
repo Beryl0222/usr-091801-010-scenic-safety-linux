@@ -1,0 +1,30 @@
+{"scenario": "peak_day", "title": {"zh": "上午峰值入园与局部失联", "en": "Morning Peak With Sensor Blackout"}, "topology": "data/yunling_park.json", "langs": ["zh", "en", "ja"]}
+{"id": "p01", "type": "gate_count", "occurred_at": 580, "observed_at": 580, "source": "G-EAST", "payload": {"gate_id": "gate_east", "entries": 220, "exits": 0}}
+{"id": "p02", "type": "gate_count", "occurred_at": 585, "observed_at": 585, "source": "G-WEST", "payload": {"gate_id": "gate_west", "entries": 120, "exits": 0}}
+{"id": "p03", "type": "zone_count", "occurred_at": 600, "observed_at": 600, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 30}}
+{"id": "p04", "type": "zone_count", "occurred_at": 600, "observed_at": 600, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 26}}
+{"id": "p05", "type": "zone_count", "occurred_at": 605, "observed_at": 605, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 120}}
+{"id": "p06", "type": "zone_count", "occurred_at": 610, "observed_at": 610, "source": "Z-LADDERUP", "payload": {"ref": "edge:e_ladder_up", "count": 12}}
+{"id": "p07", "type": "zone_count", "occurred_at": 610, "observed_at": 610, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 8}}
+{"id": "p08", "type": "zone_count", "occurred_at": 615, "observed_at": 615, "source": "Z-SUMMIT", "payload": {"ref": "node:summit", "count": 60}}
+{"id": "p09", "type": "gate_count", "occurred_at": 618, "observed_at": 618, "source": "G-EAST", "payload": {"gate_id": "gate_east", "entries": 260, "exits": 0}}
+{"id": "p10", "type": "zone_count", "occurred_at": 620, "observed_at": 620, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 150}}
+{"id": "p11", "type": "zone_count", "occurred_at": 625, "observed_at": 625, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 70}}
+{"id": "p12", "type": "zone_count", "occurred_at": 628, "observed_at": 628, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 30}}
+{"id": "p13", "type": "zone_count", "occurred_at": 630, "observed_at": 630, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 196}}
+{"id": "p14", "type": "zone_count", "occurred_at": 632, "observed_at": 632, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 88}}
+{"id": "p15", "type": "zone_count", "occurred_at": 635, "observed_at": 635, "source": "Z-SUMMIT", "payload": {"ref": "node:summit", "count": 112}}
+{"id": "p16", "type": "zone_count", "occurred_at": 626, "observed_at": 638, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 160}}
+{"id": "p17", "type": "zone_count", "occurred_at": 642, "observed_at": 642, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 172}}
+{"id": "p18", "type": "gate_count", "occurred_at": 648, "observed_at": 648, "source": "G-WEST", "payload": {"gate_id": "gate_west", "entries": 0, "exits": 40}}
+{"id": "p19", "type": "zone_count", "occurred_at": 652, "observed_at": 652, "source": "Z-SUMMIT", "payload": {"ref": "node:summit", "count": 108}}
+{"id": "p20", "type": "zone_count", "occurred_at": 655, "observed_at": 655, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 132}}
+{"id": "p21", "type": "zone_count", "occurred_at": 658, "observed_at": 658, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 60}}
+{"id": "p22", "type": "zone_count", "occurred_at": 660, "observed_at": 660, "source": "Z-SUMMIT", "payload": {"ref": "node:summit", "count": 80}}
+{"id": "p23", "type": "zone_count", "occurred_at": 654, "observed_at": 662, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 24}}
+{"id": "p24", "type": "zone_count", "occurred_at": 663, "observed_at": 663, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 122}}
+{"id": "p25", "type": "zone_count", "occurred_at": 664, "observed_at": 664, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 55}}
+{"id": "p26", "type": "zone_count", "occurred_at": 666, "observed_at": 666, "source": "Z-SUMMIT", "payload": {"ref": "node:summit", "count": 78}}
+{"id": "p27", "type": "gate_count", "occurred_at": 670, "observed_at": 670, "source": "G-EAST", "payload": {"gate_id": "gate_east", "entries": 0, "exits": 60}}
+{"id": "p28", "type": "zone_count", "occurred_at": 672, "observed_at": 672, "source": "Z-SUMMIT", "payload": {"ref": "node:summit", "count": 70}}
+{"id": "p29", "type": "zone_count", "occurred_at": 676, "observed_at": 676, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 110}}

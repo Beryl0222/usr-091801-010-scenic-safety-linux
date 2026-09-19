@@ -2,9 +2,10 @@
 
 const { spawnSync } = require("node:child_process");
 
+// 发现所有 test_*.py，交给 unittest discover（保持与旧版一致：失败即非零退出）。
 const result = spawnSync(
   "python3",
-  ["-m", "unittest", "-v", "service_contract"],
+  ["-m", "unittest", "discover", "-p", "test_*.py", "-v"],
   { stdio: "inherit" },
 );
 
@@ -13,4 +14,3 @@ if (result.error) {
   process.exit(1);
 }
 process.exit(result.status ?? 1);
-

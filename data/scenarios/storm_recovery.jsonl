@@ -1,0 +1,28 @@
+{"scenario": "storm_recovery", "title": {"zh": "索道停运、暴雨预警、设施恢复与双人解除", "en": "Cable Shutdown, Storm, Recovery, Two-Person Release"}, "topology": "data/yunling_park.json", "langs": ["zh", "en", "ja"]}
+{"id": "s01", "type": "gate_count", "occurred_at": 760, "observed_at": 760, "source": "G-EAST", "payload": {"gate_id": "gate_east", "entries": 180, "exits": 20}}
+{"id": "s02", "type": "facility_status", "occurred_at": 760, "observed_at": 760, "source": "F-CABLE", "payload": {"facility_id": "e_cable_up", "status": "open", "throughput_factor": 1.0}}
+{"id": "s03", "type": "zone_count", "occurred_at": 770, "observed_at": 770, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 44}}
+{"id": "s04", "type": "zone_count", "occurred_at": 772, "observed_at": 772, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 22}}
+{"id": "s05", "type": "zone_count", "occurred_at": 775, "observed_at": 775, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 12}}
+{"id": "s06", "type": "zone_count", "occurred_at": 778, "observed_at": 778, "source": "Z-LADDERUP", "payload": {"ref": "edge:e_ladder_up", "count": 10}}
+{"id": "s07", "type": "facility_status", "occurred_at": 790, "observed_at": 792, "source": "F-CABLE", "payload": {"facility_id": "e_cable_up", "status": "closed", "throughput_factor": 0.0}}
+{"id": "s08", "type": "facility_status", "occurred_at": 795, "observed_at": 795, "source": "F-SHUTTLE", "payload": {"facility_id": "e_shuttle", "status": "degraded", "throughput_factor": 0.5}}
+{"id": "s09", "type": "weather_alert", "occurred_at": 800, "observed_at": 802, "source": "met-office", "payload": {"hazard": "rainstorm", "level": "warning", "scope": "edge", "refs": ["e_cliff_trail"], "message": "临崖栈道暴雨预警"}}
+{"id": "s10", "type": "zone_count", "occurred_at": 805, "observed_at": 805, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 38}}
+{"id": "s11", "type": "zone_count", "occurred_at": 808, "observed_at": 808, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 28}}
+{"id": "s12", "type": "zone_count", "occurred_at": 810, "observed_at": 810, "source": "Z-LADDERUP", "payload": {"ref": "edge:e_ladder_up", "count": 28}}
+{"id": "s13", "type": "weather_alert", "occurred_at": 815, "observed_at": 818, "source": "met-office", "payload": {"hazard": "thunder", "level": "severe", "scope": "edge", "refs": ["e_cliff_trail", "e_ridge_north", "e_ladder_up"], "message": "山脊雷暴严重预警，立即疏散高海拔区段"}}
+{"id": "s14", "type": "zone_count", "occurred_at": 806, "observed_at": 820, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 40}}
+{"id": "s15", "type": "restriction", "occurred_at": 825, "observed_at": 825, "source": "ops-console", "payload": {"restriction_id": "R-OPS-001", "action": "hold", "edges": ["e_extreme_up"], "nodes": [], "reason": "极限运动平台实测大风，暂停攀登放行", "issued_by": "op_chen", "confirm_by": "op_li", "expires_at": 900, "rule_id": "manual", "release_basis": "现场风速连续10分钟低于8m/s并经双人复核"}}
+{"id": "s16", "type": "zone_count", "occurred_at": 828, "observed_at": 828, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 12}}
+{"id": "s17", "type": "zone_count", "occurred_at": 832, "observed_at": 832, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 2}}
+{"id": "s18", "type": "zone_count", "occurred_at": 835, "observed_at": 835, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 18}}
+{"id": "s19", "type": "facility_status", "occurred_at": 840, "observed_at": 846, "source": "F-CABLE", "payload": {"facility_id": "e_cable_up", "status": "open", "throughput_factor": 1.0}}
+{"id": "s20", "type": "facility_status", "occurred_at": 848, "observed_at": 848, "source": "F-SHUTTLE", "payload": {"facility_id": "e_shuttle", "status": "open", "throughput_factor": 1.0}}
+{"id": "s21", "type": "weather_clear", "occurred_at": 850, "observed_at": 852, "source": "met-office", "payload": {"hazard": "rainstorm", "scope": "edge", "refs": ["e_cliff_trail"]}}
+{"id": "s22", "type": "weather_clear", "occurred_at": 855, "observed_at": 858, "source": "met-office", "payload": {"hazard": "thunder", "scope": "edge", "refs": ["e_cliff_trail", "e_ridge_north", "e_ladder_up"]}}
+{"id": "s23", "type": "restriction_release", "occurred_at": 860, "observed_at": 860, "source": "ops-console", "payload": {"restriction_id": "R-OPS-001", "released_by": "op_li", "witness": "op_wang"}}
+{"id": "s24", "type": "zone_count", "occurred_at": 862, "observed_at": 862, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 6}}
+{"id": "s25", "type": "zone_count", "occurred_at": 864, "observed_at": 864, "source": "Z-LADDERUP", "payload": {"ref": "edge:e_ladder_up", "count": 5}}
+{"id": "s26", "type": "zone_count", "occurred_at": 866, "observed_at": 866, "source": "Z-CLIFF", "payload": {"ref": "edge:e_cliff_trail", "count": 8}}
+{"id": "s27", "type": "zone_count", "occurred_at": 868, "observed_at": 868, "source": "Z-CABLEUP", "payload": {"ref": "edge:e_cable_up", "count": 30}}

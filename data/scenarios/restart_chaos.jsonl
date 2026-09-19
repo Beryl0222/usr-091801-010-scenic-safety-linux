@@ -1,0 +1,27 @@
+{"scenario": "restart_chaos", "title": {"zh": "乱序迟到、馈源失联、服务重启与夜场峰值", "en": "Out-of-Order, Blackout Recovery, Restart, Night Peak"}, "topology": "data/yunling_park.json", "langs": ["zh", "en", "ja"]}
+{"id": "r01", "type": "gate_count", "occurred_at": 690, "observed_at": 690, "source": "G-EAST", "payload": {"gate_id": "gate_east", "entries": 300, "exits": 0}}
+{"id": "r02", "type": "zone_count", "occurred_at": 700, "observed_at": 700, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 90}}
+{"id": "r03", "type": "facility_status", "occurred_at": 700, "observed_at": 700, "source": "F-SHUTTLE", "payload": {"facility_id": "e_shuttle", "status": "open", "throughput_factor": 1.0}}
+{"id": "r04", "type": "shuttle_capacity", "occurred_at": 700, "observed_at": 700, "source": "S-SHUTTLE", "payload": {"facility_id": "e_shuttle", "available": 80}}
+{"id": "r05", "type": "zone_count", "occurred_at": 705, "observed_at": 705, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 14}}
+{"id": "r06", "type": "zone_count", "occurred_at": 712, "observed_at": 712, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 22}}
+{"id": "r07", "type": "zone_count", "occurred_at": 718, "observed_at": 718, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 40}}
+{"id": "r08-bad", "type": "drone_sighting", "occurred_at": 720, "observed_at": 720, "source": "unknown", "payload": {}}
+{"id": "r09", "type": "zone_count", "occurred_at": 700, "observed_at": 722, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 18}}
+{"id": "r10", "type": "gate_count", "occurred_at": 725, "observed_at": 725, "source": "G-WEST", "payload": {"gate_id": "gate_west", "entries": 90, "exits": 0}}
+{"id": "r11", "type": "restriction", "occurred_at": 730, "observed_at": 730, "source": "ops-console", "payload": {"restriction_id": "R-OPS-010", "action": "hold", "edges": ["e_extreme_back"], "nodes": [], "reason": "极限环线维护放行管控（短时）", "issued_by": "op_zhao", "confirm_by": "op_sun", "expires_at": 760, "rule_id": "manual"}}
+{"id": "r12", "type": "service_restart", "occurred_at": 900, "observed_at": 900, "source": "ops-console", "payload": {"reason": "值班席主机重启，状态需由事件日志重建"}}
+{"id": "r13", "type": "zone_count", "occurred_at": 905, "observed_at": 905, "source": "Z-NORTH", "payload": {"ref": "node:transfer_north", "count": 70}}
+{"id": "r14", "type": "zone_count", "occurred_at": 908, "observed_at": 908, "source": "Z-RIDGE", "payload": {"ref": "edge:e_ridge_north", "count": 10}}
+{"id": "r15", "type": "gate_count", "occurred_at": 1180, "observed_at": 1180, "source": "G-WEST", "payload": {"gate_id": "gate_west", "entries": 480, "exits": 0}}
+{"id": "r16", "type": "zone_count", "occurred_at": 1230, "observed_at": 1230, "source": "Z-STAGE", "payload": {"ref": "edge:e_south_stage", "count": 210}}
+{"id": "r17", "type": "shuttle_capacity", "occurred_at": 1235, "observed_at": 1235, "source": "S-SHUTTLE", "payload": {"facility_id": "e_shuttle", "available": 30}}
+{"id": "r18", "type": "facility_status", "occurred_at": 1240, "observed_at": 1240, "source": "F-SHUTTLE", "payload": {"facility_id": "e_shuttle", "status": "degraded", "throughput_factor": 0.5}}
+{"id": "r19", "type": "zone_count", "occurred_at": 1245, "observed_at": 1245, "source": "Z-STAGE", "payload": {"ref": "edge:e_south_stage", "count": 300}}
+{"id": "r20", "type": "zone_count", "occurred_at": 1252, "observed_at": 1252, "source": "Z-STAGE", "payload": {"ref": "edge:e_south_stage", "count": 350}}
+{"id": "r21", "type": "zone_count", "occurred_at": 1220, "observed_at": 1255, "source": "Z-STAGE", "payload": {"ref": "edge:e_south_stage", "count": 190}}
+{"id": "r22", "type": "gate_count", "occurred_at": 1262, "observed_at": 1262, "source": "G-WEST", "payload": {"gate_id": "gate_west", "entries": 0, "exits": 200}}
+{"id": "r23", "type": "zone_count", "occurred_at": 1270, "observed_at": 1270, "source": "Z-STAGE", "payload": {"ref": "edge:e_south_stage", "count": 120}}
+{"id": "r24", "type": "facility_status", "occurred_at": 1280, "observed_at": 1280, "source": "F-SHUTTLE", "payload": {"facility_id": "e_shuttle", "status": "open", "throughput_factor": 1.0}}
+{"id": "r25", "type": "shuttle_capacity", "occurred_at": 1282, "observed_at": 1282, "source": "S-SHUTTLE", "payload": {"facility_id": "e_shuttle", "available": 88}}
+{"id": "r26", "type": "zone_count", "occurred_at": 1290, "observed_at": 1290, "source": "Z-STAGE", "payload": {"ref": "edge:e_south_stage", "count": 60}}
